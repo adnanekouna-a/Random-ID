@@ -7,6 +7,10 @@ const capitalize = (str) => {
   return words.join(" ");
 }
 
+const reverseDOB = (str) => {
+  return `${str.slice(8)}/${str.slice(5,7)}/${str.slice(0,4)}`
+}
+
 // DOM variables
 const image = document.querySelector("#id-image")
 const first_name = document.querySelector("#first-name")
@@ -24,7 +28,7 @@ fetch('https://randomuser.me/api/')
     last_name.textContent = data.results[0].name.last
     gender.textContent = capitalize(data.results[0].gender)
     nationality.textContent = data.results[0].location.country
-    date_of_birth.textContent = data.results[0].dob.date.slice(0,10)
+    date_of_birth.textContent = reverseDOB(data.results[0].dob.date.slice(0,10))
     phone.textContent = data.results[0].phone
     image.setAttribute("src",data.results[0].picture.large)
   })
