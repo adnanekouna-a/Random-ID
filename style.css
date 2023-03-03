@@ -1,0 +1,110 @@
+:root {
+    --bg-color: #1e2234;
+    --text-color: #f3f0e5;
+    --light-accent-color: #B3B9BF;
+    --dark-accent-color: #383b5d;
+}
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    margin: 0;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--bg-color);
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+#id-frame {
+    height: 25rem;
+    width: 45rem;
+    background-color: var(--dark-accent-color);
+    opacity: 1;
+    background-size: 40px 40px;
+    background-image: repeating-linear-gradient(45deg, #323554 0, #323554 4px, #383b5d 0, #383b5d 50%);
+    border: solid 0.25em var(--light-accent-color);
+    border-radius: 2.5%;
+}
+
+#container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    height: 100%;
+    width: 100%;
+}
+
+#id-image{
+    height: 200px;
+    width: 200px;
+    border-radius: 10%;
+    margin-left: 2rem;
+    margin-right: 4rem;
+    object-fit: contain;
+    filter: sepia(0.75);
+}
+
+#first-row-info{
+    flex-grow: 1.5;
+    margin-top: 0.75rem;
+}
+
+#id-first-name, #id-last-name, #id-nationality, #id-gender, #id-dob, #id-phone{
+    display: flex;
+    justify-content: space-between;
+}
+
+#id-first-name p, #id-last-name p, #id-nationality p, #id-gender p, #id-dob p, #id-phone p{
+    margin: 0.75rem 0 0.75rem 0;
+    width: 50%;
+    display: inline-block;
+}
+
+/* #second-row-container{
+    width: 70%;
+    margin-left: 10% ;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+} */
+
+/* #id-gender, #id-dob, #id-phone{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-right: 1em;
+}
+
+#id-gender p, #id-dob p, #id-phone p {
+    display: inline-block;
+    width: 45%;
+    margin: 0.75rem 0 0.75rem 0;
+
+}
+
+#gender, #dob, #phone {
+    padding-left: 2rem;
+} */
+
+#phone {
+    font-size: 1.4rem;
+}
+
+.title {
+    font-weight: 500;
+}
